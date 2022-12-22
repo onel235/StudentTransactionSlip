@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Case Study</title>
+
+	<script type="text/javascript" src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+
+	<link rel="stylesheet" href="user.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+<div>
+			<form class="contact-form" onsubmit="return false;">
+				<span class="form-title">Student Transaction Slip</span>
+				<center><div id="canvas"></div></center>
+
+				<div class="wrapper-input">
+					<span class="label-input">Full Name</span>
+					<input class="input" onchange="updateQrData();" type="text" name="name" id="dataInput" placeholder="Enter your full name" required>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="wrapper-input">
+					<span class="label-input">Section</span>
+					<input class="input" onchange="updateQrnat();" type="text" name="name" id="nat" placeholder="Enter your section" required>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="wrapper-input">
+					<span class="label-input">Student Number</span>
+					<input class="input" onchange="updateQrblank();" type="text" name="name" id="blank" placeholder="Enter your student number" required>
+					<span class="focus-input"></span>
+				</div>
+				
+
+				<div class="wrapper-input">
+					<span class="label-input">Requesting</span>
+					<select name="requesting" id="request" onchange="updateQrRequest();">
+						<option>ID</option>
+						<option>Form 137</option>
+						<option>Good Moral</option>
+						<option>Others</option>
+					</select>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="wrapper-input">
+					<span class="label-input">Department</span>
+					<input class="input" onchange="updateQrblank();" type="text" name="name" id="department" placeholder="Enter your department" required>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="form-btn">
+					<div class="bg-btn"></div>
+						<button class="button" onclick="download();">
+							<span>
+								DOWNLOAD
+								<i class="fa-solid fa-download"></i>
+							</span>
+						</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="qr.js"></script>
+</body>
+</html>
